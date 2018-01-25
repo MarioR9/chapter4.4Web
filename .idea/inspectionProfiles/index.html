@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="" ng-init="input='The Angle of PI/7 is:'">
+    <h1 style="color:mediumslateblue"> <spam ng-bind="input"></spam></h1>
+    <button class="button" onclick="btn()">Click for Answear</button>
+    <p id="msg2"></p>
+    <script>
+        function btn() {
+            var conversion,piToAngle,angleInDegrees,result;
+            var text;
+            var x = document.getElementById("msg2")
+            x.style.fontSize = "xx-large"
+            x.style.color = "red"
+
+            conversion=(Math.PI)/7
+            piToAngle = Math.sin(conversion)
+            //Radians to Angle
+            angleInDegrees = conversion*(180/Math.PI)
+            result=(angleInDegrees)
+
+            console.log(result)
+            text=Math.round(result)
+            x.innerHTML = text
+        }
+
+    </script>
+
+    <style>
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: white;
+            color: black;
+            border: 2px solid #4CAF50;
+        }
+
+    </style>
+</div>
+</body>
+</html>
